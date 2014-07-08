@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <style type="text/css">
+            .board {
+                margin: 20px 0 0 0 ;
+            }
+            .BOARD { background: url('images/Black_White.png') no-repeat;
+                position: absolute;
+                width: 23px;
+                height: 23px;
+            }
+            .BOARD:hover {
+                background: url('images/Black_White.png') no-repeat -322px 0;
+                z-index: 1;
+            }
+            .B0 { background-position: -92px 0; }
+            .B1 { background-position: -115px 0; }
+            .B2 { background-position: -138px 0; }
+            .B3 { background-position: -161px 0; }
+            .B4 { background-position: -184px 0; }
+            .B5 { background-position: -207px 0; }
+            .B6 { background-position: -230px 0; }
+            .B7 { background-position: -253px 0; }
+            .B8 { background-position: -276px 0; }
+            .BX { background-position: -299px 0; }
+            .POINT { background: url('images/Black_White.png') no-repeat;
+                position: absolute; 
+                width: 23px;
+                height: 23px;
+                z-index: 1;
+            }
+            .BC {
+                background-position: -46px 0; 
+            }
+            .WC {
+                background-position: 0 0; 
+            }
+            .B {
+                background-position: -69px 0; 
+            }
+            .W {
+                background-position: -23px 0; 
+            }
+            .CV {
+                background: none repeat scroll 0 0 white;
+                /*padding: 23px 22px 22px 23px;
+                position: absolute;
+                width: 0;
+                height: 0;*/
+                /*border: 1px solid black;*/
+            }
+            .BAR {
+                color:blue;
+                font-size: 2.5em;
+                text-decoration: none;
+                display: inline;
+                padding: 0 10px;
+                border: black;
+                border-style: solid;
+                margin: 0 -1px 10px -1px;
+            }
+        </style>
+            <!--CV margin 相应减11-->
+        <!--http://libs.baidu.com/jquery/1.9.1/jquery.min.js-->
+        <script src="js/jquery-1.9.1.min.js"></script>
+        <script>
+            if (!window.jQuery) {
+                var script = document.createElement('script');
+                script.src = "js/jquery-1.9.1.min.js";
+                document.body.appendChild(script);
+            }
+        </script>
+        <script type="text/javascript" charset="utf-8">
+            boardSize=19;
+            forbidSameNum=16;
+            suicide = 0;
+            first = -1;
+            </script>
+            <script src="js/board.js"></script>
+            <title>下围棋</title>
+        </head>
+        <body>
+        </body>
+        <script>
+            //var qipu='AV[dc][dd][ed][ec][cd][cc][bc][bd][ee][df][ce][de][mh][nf][ng][nh][qh][ri][qj][fn][io][in][jm][pn][on][no][np][oq][pq][qp][qo][eq][fq][qi]';
+            var qipu='AV[dc]';
+            var show=new Show(qipu);
+        </script>
+    </html>
